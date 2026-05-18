@@ -17,7 +17,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y build-essential pkg-config \
-            libgtk-3-dev libwebkit2gtk-4.0-dev
+            libgtk-3-dev \
+            libwebkit2gtk-6.0-dev
 
       - name: Build
         run: |
