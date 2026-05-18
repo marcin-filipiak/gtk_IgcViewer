@@ -1,0 +1,5 @@
+Package: IgcViewer
+Version: 0.1
+Architecture: all
+Maintainer: Marcin Filipiak <m.filipiak@noweenergie.org>
+Description: IGC Viewer
