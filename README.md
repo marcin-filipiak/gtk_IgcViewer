@@ -1,4 +1,3 @@
-````md
 # IGC Flight Viewer
 
 Native Linux desktop application for viewing and analyzing `.IGC` glider flight logs.
