@@ -1,0 +1,31 @@
+name: Linux Build
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential pkg-config \
+            libgtk-3-dev libwebkit2gtk-4.0-dev
+
+      - name: Build
+        run: |
+          chmod +x GCompileAndPack.sh
+          ./GCompileAndPack.sh
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: IgcViewer-linux
+          path: bin/IgcViewer
